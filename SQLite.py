@@ -146,7 +146,7 @@ def list_all_rows(cursor, table):
 # read this https://www.dataquest.io/blog/python-pandas-databases/
 # search creating tables with pandas
 if __name__ == '__main__':
-    database_path = r'E:\_NLP\NIPS Papers DB\TestEmptyDB.sqlite'
+    database_path = '' #Enter path to sql lite database here
     cursor, conn = connect_to_database(database_path)
     tables = list_tables(cursor)
     print(tables)
