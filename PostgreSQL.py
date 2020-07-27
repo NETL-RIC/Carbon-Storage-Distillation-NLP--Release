@@ -13,8 +13,8 @@ import psycopg2
 # Connection modules
 
 
-def connect_to_database(databasename='livingdb', databaseIP='10.50.45.73', databaseport='5432', username='postgres',
-                       password='postgres'):
+def connect_to_database(databasename='', databaseIP='', databaseport='', username='',
+                       password=''):
     """Module takes arguments to connect to a PostgreSQL database using SQL Alchemy and returns a connection.
 
     Args:
