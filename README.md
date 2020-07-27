@@ -5,6 +5,6 @@ Application of code is described in manuscript
 "Distilling Data to Drive Carbon Storage Insights"
 by Paige Morkner, Jennifer Bauer, Christopher Creason, Michael Sabbatino, Patrick Wingo1, Randall Greenburg, Samuel Walker, David Yeates, and Kelly Rose. 
 
-Contact information: 
+Contact information: Michael Sabbatino, Michael.Sabbatino@netl.doe.gov, 541-967-5960 (office)
 
-Prefered Citation: 
+
