@@ -14,6 +14,8 @@ from PDFtoDatabase import cleanupdocuments #custom cleanup module
 import SQLite #custom sql query module
 import time
 import matplotlib.pyplot as plt
+#location of sqlite database
+database_location = r"E:\Spyder\NLP\WorkingPapersALL.sqlite"      #Connect to your database
 
 #%%
 def compute_coherence_values(dictionary, corpus, texts, limit, start, step):
