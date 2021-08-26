@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+r#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Fri Aug 23 09:06:43 2019
@@ -21,6 +21,9 @@ import json
 import psycopg2
 import argparse
 spacy_nlp = spacy.load('en_core_web_lg')
+
+PDFfolder = 'enter folder containing input pdf files here'
+database_location = 'enter output location here'
 
 def readpdflistsentences(filelocation):
     """Module tajes path to text file location and returns a list of sentences from doc using Tika
@@ -127,7 +130,7 @@ parse.add_argument('--db',dest='Database', choices=['SQLite','sqlite','PostgreSQ
 args = parse.parse_args()
 fmt = args.Database
 
-if fmt == 'SQLite' or fmt == 'sqlite':
+if fmt == 'SQLite' or fmt == 'sqlite' or fmt == '':
     #Locations of files
     #TODO: Add for loop make doclocation folder of pdf files
     #Copy database for each project then populate
@@ -135,8 +138,7 @@ if fmt == 'SQLite' or fmt == 'sqlite':
     failed = 0
     failed_list = []
     if __name__ == '__main__':
-        PDFfolder = '/home/greenbur/NewFolder/NLP/eXtremeMAT_ALL'
-        database_location = '/home/greenbur/NLP/Databases/eXtremeMAT_Maddison.sqlite'
+
         tablename = 'newpapers'
         SQLite.create_NLP_Table(database_location, tablename)
         #PDFfolder = sys.argv[0]
@@ -195,7 +197,6 @@ elif fmt == 'PostgreSQL' or fmt == 'postgresql':
     tablename = "Sweetness"
 
     if __name__ == '__main__':
-        PDFfolder = '/home/greenbur/NewFolder/NLP/eXtremeMAT_ALL'
         #PDFfolder = sys.argv[0]
         #TODO: Argparse for this
         newtablename = tablename
